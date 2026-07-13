@@ -1,3 +1,15 @@
+body{
+
+    background-image:url("../images/back.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
+
 .title {
     width: 930px;
     max-width: 90%;
@@ -11,6 +23,34 @@
     font-size:60px;
     color:#ff5ea8;
     margin-bottom:15px;
+}
+
+.title h1{
+
+    animation:titleMove 1s ease;
+
+}
+
+
+@keyframes titleMove{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
 }
 
 
@@ -99,8 +139,11 @@
 }
 
 .goods-item:hover {
-    transform: translateY(-8px);
-    transition: 0.3s;
+
+    transform: translateY(-8px) scale(1.02);
+
+    transition:0.3s;
+
 }
 
 .coming{
@@ -173,6 +216,57 @@
     color: #ff5ea8;
 }
 
-body{
-    background:#fafafa;
+
+
+.goods-item{
+    position:relative;
+    overflow:hidden;
+}
+
+.goods-item::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:50%;
+    height:100%;
+
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.8),
+        transparent
+    );
+
+    transform:skewX(-25deg);
+
+}
+
+.goods-item:hover::before{
+
+    animation:shine 0.8s;
+
+}
+
+
+
+@keyframes shine{
+
+    from{
+
+        left:-100%;
+
+    }
+
+
+    to{
+
+        left:150%;
+
+    }
+
 }

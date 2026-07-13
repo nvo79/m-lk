@@ -1,4 +1,14 @@
-/* タイトル */
+body{
+
+    background-image:url("../images/back.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+}
 
 .title {
     width: 930px;
@@ -15,15 +25,40 @@
     margin-bottom:15px;
 }
 
+.title h1{
+
+    animation:titleMove 1s ease;
+
+}
+
+
+@keyframes titleMove{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
 
 .title p{
     font-size:18px;
     letter-spacing:2px;
 }
 
-
-
-/* ヘッダー */
 
 .header{
     background:#fff;
@@ -48,10 +83,6 @@
 
 }
 
-
-
-/* 本文 */
-
 .access{
 
     width:930px;
@@ -61,9 +92,6 @@
 
 }
 
-
-
-/* 事務所カード */
 
 .office{
 
@@ -123,10 +151,6 @@
 
 }
 
-
-
-/* 地図カード */
-
 .map{
 
     background:#fff;
@@ -176,20 +200,6 @@
     font-size:18px;
 
 }
-
-
-
-/* 背景 */
-
-body{
-
-    background:#fafafa;
-
-}
-
-
-
-/* フッター */
 
 .footer{
 
@@ -273,10 +283,6 @@ body{
 
 }
 
-
-
-/* スマホ */
-
 @media(max-width:800px){
 
 
@@ -303,8 +309,6 @@ body{
 }
 
 }
-
-/* カーソルを合わせた時の動き */
 
 .office:hover,
 .map:hover{

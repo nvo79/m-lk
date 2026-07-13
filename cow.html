@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>GAME | AMARI URETEEHEN</title>
+
+<meta name="viewport" content="width=device-width">
+
+<link href="css/cow.css" rel="stylesheet">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+
+<h1>牛ジャンプゲーム</h1>
+
+
+<p>
+ジャンプ回数：
+<span id="count">0</span> 回
+</p>
+
+
+
+<div class="game">
+
+    <img id="cow" src="images/cow.png" alt="牛">
+
+</div>
+
+
+
+<p>
+スペースキーでジャンプ！
+</p>
+
+
+
+
+<script>
+
+
+let count = 0;
+
+
+const cow = document.getElementById("cow");
+
+const counter = document.getElementById("count");
+
+
+
+document.addEventListener("keydown", function(event){
+
+
+
+    if(event.code === "Space"){
+
+
+
+        event.preventDefault();
+
+
+
+        count++;
+
+        counter.textContent = count;
+
+        cow.classList.remove("jump");
+
+        void cow.offsetWidth;
+
+        cow.classList.add("jump");
+
+
+        if(count % 10 === 0){
+
+
+            const mo = document.createElement("div");
+
+
+            mo.textContent = "モーーーーーーーーー";
+
+
+            mo.className = "mo-text";
+
+
+
+            // 高さランダム
+
+            mo.style.top = Math.random() * 70 + 10 + "%";
+
+
+
+            document.body.appendChild(mo);
+
+
+
+            setTimeout(function(){
+
+                mo.remove();
+
+            },5000);
+
+
+
+        }
+
+
+    }
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
