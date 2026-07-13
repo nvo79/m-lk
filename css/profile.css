@@ -35,7 +35,7 @@
 }
 
 .member-photo {
-    height: 250px;
+    aspect-ratio: 3 / 4;
     margin: 0 -28px 24px;
     background: #111;
     overflow: hidden;
@@ -76,40 +76,20 @@
     background: #202020;
 }
 
-.left-ear .member-photo img {
-    object-position: 9% top;
-}
-
 .sashimi .member-color {
     background: #1f9bff;
-}
-
-.sashimi .member-photo img {
-    object-position: 30% top;
 }
 
 .invrafon .member-color {
     background: #ff79bd;
 }
 
-.invrafon .member-photo img {
-    object-position: 50% top;
-}
-
-.shabushabu .member-color {
+.shanshan .member-color {
     background: #9fa7b2;
-}
-
-.shabushabu .member-photo img {
-    object-position: 70% top;
 }
 
 .mimizu .member-color {
     background: #2ba86f;
-}
-
-.mimizu .member-photo img {
-    object-position: 91% top;
 }
 
 .group-shot {
