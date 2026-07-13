@@ -5,6 +5,30 @@
     text-align: center;
 }
 
+.header{
+    background-color:#000;
+}
+
+
+.header-inner{
+    width:930px;
+    max-width:90%;
+    margin:0 auto;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+
+.header-logo img{
+
+    width:150px;
+    display:block;
+    padding:15px 0;
+
+}
+
 .goods-list {
     width: 930px;
     max-width: 90%;
