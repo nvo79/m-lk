@@ -1,0 +1,181 @@
+body{
+
+    margin:0;
+
+    height:100vh;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    font-family:sans-serif;
+
+
+    background-image:url("../images/field.png");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+
+
+h1{
+
+    margin-top:40px;
+
+    color:white;
+
+    text-shadow:0 2px 5px #000;
+
+}
+
+
+
+p{
+
+    color:white;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    text-shadow:0 2px 5px #000;
+
+}
+
+
+
+
+.game{
+
+    height:350px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:end;
+
+}
+
+
+
+
+#cow{
+
+    width:180px;
+
+}
+
+
+
+
+.jump{
+
+    animation:jump 0.25s;
+
+}
+
+
+
+
+@keyframes jump{
+
+
+0%{
+
+    transform:translateY(0);
+
+}
+
+
+40%{
+
+    transform:translateY(-180px);
+
+}
+
+
+100%{
+
+    transform:translateY(0);
+
+}
+
+
+}
+
+
+
+
+/* ニコニコ風コメント */
+
+.mo-text{
+
+
+    position:fixed;
+
+
+    left:100%;
+
+
+    white-space:nowrap;
+
+
+
+    font-family:"Cherry Bomb One", cursive;
+
+
+    font-size:60px;
+
+
+    color:#ff5ea8;
+
+
+
+    text-shadow:
+
+    2px 2px 0 white,
+
+    -2px -2px 0 white,
+
+    2px -2px 0 white,
+
+    -2px 2px 0 white;
+
+
+
+    animation:moMove 5s linear;
+
+
+
+    z-index:10;
+
+
+}
+
+
+
+
+@keyframes moMove{
+
+
+from{
+
+    transform:translateX(0);
+
+}
+
+
+
+to{
+
+    transform:translateX(-150vw);
+
+}
+
+
+
+}
