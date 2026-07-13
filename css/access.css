@@ -1,94 +1,32 @@
-.access {
-    max-width: 1000px;
-    margin: 80px auto;
-    padding: 0 20px;
-}
+/* タイトル */
 
-.office {
-    display: flex;
-    gap: 40px;
-    align-items: center;
-    margin-bottom: 80px;
-}
-
-
-.office img {
-    width: 45%;
-    border-radius: 20px;
-}
-
-
-.office-text {
-    flex: 1;
-}
-
-
-.office-text h2 {
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-
-.office-text p {
-    line-height: 2;
-}
-
-.map {
+.title {
+    width: 930px;
+    max-width: 90%;
+    margin: 75px auto;
     text-align: center;
 }
 
 
-.map h2 {
-    font-size: 32px;
-    margin-bottom: 30px;
+.title h1{
+    font-family:"Cherry Bomb One", cursive;
+    font-size:60px;
+    color:#ff5ea8;
+    margin-bottom:15px;
 }
 
 
-.map iframe {
-    width: 100%;
-    max-width: 700px;
-    height: 450px;
-    border-radius: 20px;
+.title p{
+    font-size:18px;
+    letter-spacing:2px;
 }
 
 
-.map p {
-    margin-top: 25px;
-    line-height: 2;
-}
-
-
-
-
-.notice {
-    text-align: center;
-    margin-top: 60px;
-    font-size: 14px;
-}
-
-
-@media(max-width:700px){
-
-    .office {
-        flex-direction: column;
-    }
-
-
-    .office img {
-        width:100%;
-    }
-
-
-    .map iframe {
-        height:350px;
-    }
-
-}
 
 /* ヘッダー */
 
 .header{
-    background-color:#000;
+    background:#fff;
 }
 
 
@@ -99,7 +37,6 @@
 
     display:flex;
     align-items:center;
-    justify-content:space-between;
 }
 
 
@@ -113,11 +50,150 @@
 
 
 
+/* 本文 */
+
+.access{
+
+    width:930px;
+    max-width:90%;
+
+    margin:50px auto 80px;
+
+}
+
+
+
+/* 事務所カード */
+
+.office{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:40px;
+
+    padding:40px;
+
+    margin-bottom:60px;
+
+}
+
+
+
+.office img{
+
+    width:45%;
+
+    border-radius:15px;
+
+}
+
+
+
+.office-text{
+
+    flex:1;
+
+}
+
+
+
+.office-text h2{
+
+    font-size:32px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.office-text p{
+
+    line-height:2;
+
+}
+
+
+
+/* 地図カード */
+
+.map{
+
+    background:#fff;
+
+    border-radius:15px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+.map h2{
+
+    font-size:32px;
+
+    margin-bottom:30px;
+
+}
+
+
+
+.map iframe{
+
+    width:100%;
+
+    max-width:700px;
+
+    height:450px;
+
+    border-radius:15px;
+
+}
+
+
+
+.map p{
+
+    margin-top:25px;
+
+    line-height:2;
+
+    font-size:18px;
+
+}
+
+
+
+/* 背景 */
+
+body{
+
+    background:#fafafa;
+
+}
+
+
+
 /* フッター */
 
 .footer{
 
-    background-color:#000;
+    background:#000;
 
     color:#fff;
 
@@ -177,10 +253,6 @@
 
     margin-top:20px;
 
-    color:#fff;
-
-    font-size:14px;
-
 }
 
 
@@ -198,5 +270,47 @@
 .footer .copyright a:hover{
 
     color:#ff5ea8;
+
+}
+
+
+
+/* スマホ */
+
+@media(max-width:800px){
+
+
+.office{
+
+    display:block;
+
+}
+
+
+.office img{
+
+    width:100%;
+
+    margin-bottom:30px;
+
+}
+
+
+.map iframe{
+
+    height:350px;
+
+}
+
+}
+
+/* カーソルを合わせた時の動き */
+
+.office:hover,
+.map:hover{
+
+    transform:translateY(-8px);
+
+    transition:0.3s;
 
 }
