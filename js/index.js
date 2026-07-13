@@ -2,13 +2,46 @@ window.addEventListener('load', function () {
     var $button = this.document.querySelector('.toggle-menu-button');
     var $menu = this.document.querySelector('.header-site-menu');
 
-    $button.addEventListener('click', function () {
-        if ($menu.classList.contains('is-show')) {
-            $menu.classList.remove('is-show');
+    $(function(){
+
+        // メニューボタンをクリック
+        $(".toggle-menu-button").click(function(e){
+
+            e.stopPropagation();
+
+            $(".site-menu").slideToggle(300);
+            $(".cover").fadeToggle(300);
+
+        });
+
+
+        // coverをクリックしたら閉じる
+        $(".cover").click(function(){
+
+            $(".site-menu").slideUp(300);
+            $(".cover").fadeOut(300);
+
+        });
+
+
+        // nav内をクリックしても閉じない
+        $(".site-menu").click(function(e){
+
+            e.stopPropagation();
+
+        });
+
+        $(window).resize(function(){
+
+        if(window.innerWidth > 800){
+
+            $(".site-menu").removeAttr("style");
+            $(".cover").removeAttr("style");
+
         }
-        else {
-            $menu.classList.add('is-show');
-        }
+
+    });
+
     });
 
     let imgLength = 4,      //画像枚数
