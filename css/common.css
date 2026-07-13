@@ -1,0 +1,206 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #202020;
+    background: #fff7fb;
+    font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Yu Gothic", Meiryo, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #f2cfe0;
+    backdrop-filter: blur(10px);
+}
+
+.header-inner {
+    width: 1100px;
+    max-width: 92%;
+    min-height: 78px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-logo img {
+    width: 150px;
+    display: block;
+}
+
+.site-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 34px;
+    align-items: center;
+}
+
+.site-menu a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    transition: color 0.2s ease;
+}
+
+.site-menu a:hover {
+    color: #ff5ea8;
+}
+
+.toggle-menu-button {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    position: relative;
+}
+
+.toggle-menu-button::before,
+.toggle-menu-button::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    width: 26px;
+    height: 3px;
+    border-radius: 3px;
+    background: #222;
+    transition: transform 0.2s ease, top 0.2s ease;
+}
+
+.toggle-menu-button::before {
+    top: 15px;
+}
+
+.toggle-menu-button::after {
+    top: 26px;
+}
+
+.toggle-menu-button.is-open::before {
+    top: 21px;
+    transform: rotate(45deg);
+}
+
+.toggle-menu-button.is-open::after {
+    top: 21px;
+    transform: rotate(-45deg);
+}
+
+.main {
+    min-height: 70vh;
+}
+
+.title {
+    width: 930px;
+    max-width: 90%;
+    margin: 75px auto 45px;
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+    color: #ff5ea8;
+    font-family: "Cherry Bomb One", "Helvetica Neue", sans-serif;
+    font-size: 54px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.title p {
+    margin: 12px 0 0;
+    color: #595959;
+    font-weight: 700;
+}
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+}
+
+.footer .site-menu ul {
+    justify-content: center;
+}
+
+.footer .site-menu a,
+.footer .copyright a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .site-menu a:hover,
+.footer .copyright a:hover {
+    color: #ff5ea8;
+}
+
+.footer-logo img {
+    width: 170px;
+    margin-top: 22px;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media (max-width: 800px) {
+    .header-inner {
+        min-height: 68px;
+    }
+
+    .header-logo img {
+        width: 126px;
+    }
+
+    .toggle-menu-button {
+        display: block;
+    }
+
+    .header-site-menu {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 68px;
+        display: none;
+        padding: 24px 0;
+        background: #fff;
+        border-bottom: 1px solid #f2cfe0;
+    }
+
+    .header-site-menu.is-show {
+        display: block;
+    }
+
+    .site-menu ul,
+    .footer .site-menu ul {
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .title {
+        margin-top: 46px;
+    }
+
+    .title h1 {
+        font-size: 42px;
+    }
+}

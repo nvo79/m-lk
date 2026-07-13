@@ -1,0 +1,178 @@
+.about-hero,
+.concept,
+.history,
+.message {
+    width: 1040px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.about-hero {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #151515;
+}
+
+.about-hero img {
+    width: 100%;
+    display: block;
+}
+
+.about-hero-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 80px 48px 42px;
+    color: #fff;
+    background: linear-gradient(0deg, rgba(0,0,0,0.82), rgba(0,0,0,0));
+}
+
+.label {
+    margin: 0 0 10px;
+    color: #8df2ff;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+}
+
+.about-hero h2,
+.concept h2,
+.history h2,
+.message h2 {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1.35;
+}
+
+.about-hero-text p:last-child {
+    max-width: 680px;
+    margin: 16px 0 0;
+    line-height: 1.9;
+}
+
+.concept {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 48px;
+    align-items: start;
+}
+
+.concept-text p,
+.message p {
+    line-height: 1.9;
+}
+
+.concept-card {
+    background: #fff;
+    border: 2px solid #ffb9d9;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(255, 94, 168, 0.12);
+}
+
+.concept-card dl {
+    margin: 0;
+    padding: 28px;
+}
+
+.concept-card div {
+    padding: 18px 0;
+    border-bottom: 1px solid #f5d8e6;
+}
+
+.concept-card div:first-child {
+    padding-top: 0;
+}
+
+.concept-card div:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.concept-card dt {
+    color: #ff5ea8;
+    font-weight: 900;
+}
+
+.concept-card dd {
+    margin: 6px 0 0;
+    font-weight: 700;
+}
+
+.history {
+    margin-top: 70px;
+    padding: 48px;
+    background: #fff;
+    border-radius: 8px;
+}
+
+.history ol {
+    margin: 28px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.history li {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 24px;
+    padding: 22px 0;
+    border-top: 1px solid #f1d5e3;
+}
+
+.history span {
+    color: #ff5ea8;
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.history p {
+    margin: 0;
+    line-height: 1.8;
+}
+
+.message {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 38px;
+    align-items: center;
+}
+
+.message img {
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .about-hero-text {
+        position: static;
+        padding: 28px;
+        background: #151515;
+    }
+
+    .about-hero h2,
+    .concept h2,
+    .history h2,
+    .message h2 {
+        font-size: 26px;
+    }
+
+    .concept,
+    .message {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 48px;
+    }
+
+    .history {
+        margin-top: 48px;
+        padding: 28px;
+    }
+
+    .history li {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
