@@ -134,7 +134,12 @@ img {
 }
 
 .slide li{
-    flex: auto;
+    flex: 0 0 20%;
+    height: auto;
+}
+
+.slide img{
+    display: block;
     width: 100%;
     height: auto;
 }
