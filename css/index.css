@@ -126,6 +126,8 @@ img {
 
 .slide ul{
     position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     padding: 0;
     width: 500%;
