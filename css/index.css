@@ -17,6 +17,7 @@ nav.floating ul li a{
     font-family: 'Cherry Bomb One', cursive;
     border-radius: 20px;
     display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .first-view{
@@ -151,6 +152,7 @@ img {
 
 .toggle-menu-button {
     display: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .header-logo {
