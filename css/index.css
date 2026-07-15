@@ -20,7 +20,9 @@ nav.floating ul li a{
 }
 
 .first-view{
-    height: calc(100vh - 110px);
+    min-height: calc(100vh - 110px);
+    display: flex;
+    align-items: center;
     position: relative;
     z-index: -1;
     align-items: center;
@@ -31,6 +33,7 @@ nav.floating ul li a{
     content: '';
     background-image: url(../images/for_index.png);
     position: absolute;
+    inset: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -45,11 +48,9 @@ nav.floating ul li a{
 .first-view-text {
     width: 85%;
     max-width: 1200px;
-    margin-left: 50px;
-    margin-right: auto;
-    padding-top: 360px;
-    padding-left: 40ox;
-    padding-bottom: 80px;
+    margin: 0 auto;
+    padding: 0;
+    padding-top: 20%;
     color: #ffffff;
     font-weight: bold;
     text-shadow: 1px 1px 10px #4b2c14;
@@ -116,6 +117,7 @@ img {
     margin-left: auto;
     margin-right: auto;
     align-items: center;
+    background-color: rgb(251, 231, 235);
 }
 
 .slide{
@@ -361,6 +363,19 @@ img {
     .page-card {
         min-height: auto;
     }
+
+    .first-view-text{
+        padding: 0 5px;
+    }
+    
+    .first-view-text h1 {
+        font-size: 48px;
+    }
+
+    .first-view-text p {
+        font-size: 20px;
+    }
+}
 
 }
 .footer {
