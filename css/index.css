@@ -8,6 +8,7 @@ nav.floating {
     position: fixed;
     bottom: 30px;
     left: 25px;
+    z-index: 1;
 }
 
 nav.floating ul li a{
